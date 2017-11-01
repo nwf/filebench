@@ -567,6 +567,13 @@ flowop_init(int ismaster)
 			fb_lfs_newflowops();
 		fb_lfs_funcvecinit();
 		break;
+
+	case UAFS_PLUG:
+		if (ismaster)
+			fb_uafs_newflowops();
+		fb_uafs_funcvecinit();
+		break;
+
 	case NFS3_PLUG:
 	case NFS4_PLUG:
 	case CIFS_PLUG:

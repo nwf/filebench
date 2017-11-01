@@ -151,4 +151,8 @@ void flowop_init(int ismaster);
 void fb_lfs_funcvecinit(void);
 void fb_lfs_newflowops(void);
 
+/* AFS specific */
+void fb_uafs_funcvecinit(void);
+void fb_uafs_newflowops(void);
+
 #endif	/* _FB_FLOWOP_H */

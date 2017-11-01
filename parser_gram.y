@@ -1397,7 +1397,9 @@ parse_options(int argc, char *argv[], struct fbparams *fbparams)
 		case 't':
 			if (!optarg)
 				usage_exit(1, "Need type for -t");
-			if (strcmp(optarg, "cifs") == 0)
+			if (strcmp(optarg, "afs") == 0)
+				fbparams->plugtype = UAFS_PLUG;
+			else if (strcmp(optarg, "cifs") == 0)
 				fbparams->plugtype = CIFS_PLUG;
 			else if (strcmp(optarg, "nfs3") == 0)
 				fbparams->plugtype = NFS3_PLUG;
